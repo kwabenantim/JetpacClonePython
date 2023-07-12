@@ -60,7 +60,7 @@ class Screen(BlittableObject) :
         self.game_over = False
         self.game_won = False
         self.game_level = game_level
-        self.font = Font(None, self.surf_height/20)
+        self.font = Font(None, self.surf_height//20)
     
     #This method controls what happens when a new game or level is started
     def new_game(self, game_level = 1):

@@ -18,7 +18,7 @@ class Player(BlittableObject):
         self.side_speed = int(Player.SIDE_SPEED * self.scale)
         self.down_speed = int(Player.DOWN_SPEED * self.scale)
         self.set_image(Player.PLAYER_IMAGE)
-        self.rect.bottomleft = (self.surf_width/2, self.surf_height)
+        self.rect.bottomleft = (self.surf_width//2, self.surf_height)
         self.velocity = [0, self.down_speed]
         self.image_ref = 0
         self.orientation = 0

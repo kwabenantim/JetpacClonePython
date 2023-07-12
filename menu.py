@@ -64,7 +64,7 @@ class Menu(BlittableObject):
         font = Font(None, text_size)
         rect_list = []
         for i in range(self.num_buttons):
-            button_pos = (surf_midpoint[0] - button_width/2,
+            button_pos = (surf_midpoint[0] - button_width//2,
                           surf_midpoint[1] + (button_height * (i - self.num_buttons/2)) * Menu.BUTTON_SPACING)
             rect = Rect(button_pos, (button_width, button_height))
             rect_list.append(rect)
@@ -74,8 +74,8 @@ class Menu(BlittableObject):
                 font = Font(None, text_size)
         self.button_rects = rect_list
         self.button_text = [font.render(s, 1, BLACK) for s in self.button_strings]
-        self.button_text_pos = [(self.button_rects[i].center[0] - self.button_text[i].get_size()[0]/2, 
-                                self.button_rects[i].center[1] - self.button_text[i].get_size()[1]/2)
+        self.button_text_pos = [(self.button_rects[i].center[0] - self.button_text[i].get_size()[0]//2, 
+                                self.button_rects[i].center[1] - self.button_text[i].get_size()[1]//2)
                                 for i in range(self.num_buttons)]
         
     def mouse_handler(self, pos):

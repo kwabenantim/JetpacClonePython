@@ -21,7 +21,7 @@ class Ship(BlittableObject) :
         launchpad    : (int,int)       - where to ground ship
         '''
         BlittableObject.__init__(self, surface)
-        self.launchpad = (self.surf_width/2, self.surf_height)
+        self.launchpad = (self.surf_width//2, self.surf_height)
         self.max_velocity = int(Ship.MAX_VELOCITY * self.scale)
         
         #Must agree with the collectable list!!

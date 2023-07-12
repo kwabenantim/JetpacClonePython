@@ -20,7 +20,7 @@ class BlittableObject :
         '''
         self.surface = surface
         self.surf_width, self.surf_height = self.surface.get_size()
-        self.scale = self.surf_width/BlittableObject.STANDARD_WIDTH
+        self.scale = self.surf_width//BlittableObject.STANDARD_WIDTH
         self.image = None        
         self.rect = None
          
